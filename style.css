@@ -6,7 +6,10 @@ body {
   padding: 20px;
 }
 
-h1 { color: #00f5ff; }
+h1 {
+  color: #00f5ff;
+  text-shadow: 0 0 12px #00f5ff;
+}
 
 .gentle {
   color: #b388ff;
@@ -15,15 +18,29 @@ h1 { color: #00f5ff; }
 }
 
 .buttons button {
-  display: block;
   width: 100%;
-  margin: 10px 0;
-  padding: 16px;
+  margin: 12px 0;
+  padding: 18px;
   background: #12121a;
   color: #ff4dff;
   border: none;
-  border-radius: 14px;
+  border-radius: 16px;
   font-size: 18px;
+  box-shadow: 0 0 12px rgba(255,77,255,0.3);
+  animation: pulse 3s infinite;
+}
+
+.buttons span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 8px rgba(255,77,255,0.2); }
+  50% { box-shadow: 0 0 18px rgba(0,245,255,0.5); }
+  100% { box-shadow: 0 0 8px rgba(255,77,255,0.2); }
 }
 
 textarea {
@@ -32,6 +49,14 @@ textarea {
   background: #12121a;
   color: white;
   border: none;
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 12px;
+  margin-bottom: 20px;
+}
+
+.feed a {
+  display: block;
+  margin: 8px 0;
+  color: #00f5ff;
+  text-decoration: none;
 }
