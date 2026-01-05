@@ -10,19 +10,26 @@
 <body>
 
 <h1>My Hub</h1>
-<p class="gentle">Check once. Breathe. You’re safe.</p>
+<p class="gentle" id="reminder"></p>
 
 <div class="buttons">
-  <button onclick="openApp('https://www.facebook.com')">Facebook</button>
-  <button onclick="openApp('https://www.messenger.com')">Messenger</button>
-  <button onclick="openApp('https://www.instagram.com')">Instagram</button>
-  <button onclick="openApp('https://www.snapchat.com')">Snapchat</button>
-  <button onclick="openApp('https://mail.google.com')">Gmail</button>
-  <button onclick="openSMS()">Text Messages</button>
+  <button onclick="launch('facebook','https://www.facebook.com')">Facebook<br><span id="facebook-time"></span></button>
+  <button onclick="launch('messenger','https://www.messenger.com')">Messenger<br><span id="messenger-time"></span></button>
+  <button onclick="launch('instagram','https://www.instagram.com')">Instagram<br><span id="instagram-time"></span></button>
+  <button onclick="launch('snapchat','https://www.snapchat.com')">Snapchat<br><span id="snapchat-time"></span></button>
+  <button onclick="launch('gmail','https://mail.google.com')">Gmail<br><span id="gmail-time"></span></button>
+  <button onclick="openSMS()">Text Messages<br><span id="sms-time"></span></button>
 </div>
 
 <h2>Notes</h2>
 <textarea id="notes" placeholder="Write what matters…"></textarea>
+
+<h2>Calm Feed</h2>
+<div class="feed">
+  <a href="https://www.thegoodtrade.com" target="_blank">🌱 Gentle Living</a>
+  <a href="https://www.positive.news" target="_blank">📰 Positive News</a>
+  <a href="https://www.brainpickings.org" target="_blank">🧠 Thoughtful Reads</a>
+</div>
 
 <script src="app.js"></script>
 </body>
